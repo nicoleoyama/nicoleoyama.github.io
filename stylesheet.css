@@ -44,22 +44,6 @@ body {
 	text-align: center;
 }
 
-div {
-	display: block;
-}
-
-/*the columns in the contact area*/
-.one {
-	float: left;
-	width: 50%;
-}
-
-.two {
-	float: left;
-	width: 25%;
-}
-
-
 img /*responsive images*/{ 
   max-width: 100%;
   height: auto;
