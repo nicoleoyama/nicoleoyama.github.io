@@ -19,6 +19,7 @@ body {
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #3e3f41;
+	width: 100%;
 	
 }
 
@@ -41,8 +42,23 @@ body {
 
 .center-text { 
 	text-align: center;
-	
 }
+
+div {
+	display: block;
+}
+
+/*the columns in the contact area*/
+.one {
+	float: left;
+	width: 50%;
+}
+
+.two {
+	float: left;
+	width: 25%;
+}
+
 
 img /*responsive images*/{ 
   max-width: 100%;
