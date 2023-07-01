@@ -11,13 +11,24 @@
   @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: "Poppins", sans-serif; } 
 
+  .container { 
+   scroll-snap-type: y mandatory;
+   overflow-y: scroll;
+   height: 100vh; 
+   } 
+  
   section { 
    height: 100vh; 
    display: flex; 
    justify-content: center; 
    align-items: center; 
+   scroll-snap-align: start;
   } 
 
+  h1 { 
+   color: rgb(266, 266, 266);
+   text-shadow: 1px 1px 4px #000;  
+     } 
   .one { 
    background-color: rgb(36, 164, 138);
   }
