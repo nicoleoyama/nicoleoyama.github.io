@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: #fff;
+    width: 100vw;
+    height:100vh;
+    margin: 0;
+  }
+
+  .container { 
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
+  section { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+
+    /*instead of doing numerical classes for each section*/
+    &:nth-of-type(1) {
+        background-color: rgb(28, 28, 28);
+        color: #fff;
+    }
+    &:nth-of-type(2) {
+        background-color: rgb(151, 144, 144);
+        color: #494949;
+    }  
+    &:nth-of-type(3) {
+        background-color: rgb(196, 185, 221);
+        color: #494949;
+    }
+    
+    h1 { 
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15em;
+    }
+
+}
+
+  }
+
+</style>
+</head>
+<title>Hello World</title>
+
+<body>
+
+<div class="container">
+   <section>
+     <h1>Page One</h1>
+   </section>
+
+   <section>
+    <h1>Page Two</h1>
+   </section>
+
+   <section>
+    <h1>Page Three</h1>
+   </section>
+
+
+</div>
+
+
+</body>
+
+
+</html>
