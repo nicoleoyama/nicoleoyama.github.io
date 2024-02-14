@@ -107,6 +107,12 @@ img /*responsive images*/{
    padding: 10px;
 }
 
+footer {
+    font-family: "Cardinal", sans-serif;
+    font-size: 80%;
+    text-align: center;
+    margin-bottom: 4em;
+}
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {
