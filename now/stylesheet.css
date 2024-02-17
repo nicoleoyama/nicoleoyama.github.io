@@ -24,9 +24,10 @@ body {
 	line-height: 1em;
 	
 }
+
+h1 { color:  #F783AC; } 
  
 .wrapper { 
- background-color: #E8D6CB;
   width: min(100% - 30px, 1000px);
   margin-inline: auto;
  padding:10px; 
@@ -105,5 +106,5 @@ footer {
 /* links */
 a {   font-weight: bold; text-decoration: underline;}
 a:link { color:   #F783AC; text-decoration: underline;}
-a:visited { color:  #F1F2F3; text-decoration: underline;}
+a:visited { color:  #ccc; text-decoration: underline;}
 a:hover { color: #fff; text-decoration: underline;}
