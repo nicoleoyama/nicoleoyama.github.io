@@ -103,6 +103,6 @@ footer {
 
 /* links */
 a {   font-weight: bold; text-decoration: none;}
-a:link { color: #4ca39a; text-decoration: none;}
-a:visited { color: #aaa5cb; text-decoration: none;}
-a:hover { color: #D0ADA7; text-decoration: underline;}
+a:link { color:  #305252; text-decoration: none;}
+a:visited { color: #78C9C9; text-decoration: none;}
+a:hover { color: #373E40; text-decoration: underline;}
