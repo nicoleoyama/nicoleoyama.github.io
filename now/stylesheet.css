@@ -48,20 +48,7 @@ img /*responsive images*/{
   max-width: 100%;
   height: auto;
 } 
- 
-/* lists and nav #primary-menu so only the menu is inline and other lists are not*/
-
-#primary-menu ul  {
-	display: inline;
-}
-
-#primary-menu li {
-	list-style-type: none;	
-	margin-left:20px;
-	padding: 0;
-	float: left;
-}
-
+  
 /* when you select something and the background color that pops up*/
 ::-moz-selection {
 	background:#fe6e6e;
@@ -72,11 +59,7 @@ img /*responsive images*/{
 	background: #fe6e6e;
 	color: #fff;
 }
-
  
-.site-header { 
-	margin-bottom: 40px;
-} 
 /*columns*/
 
 .row {
@@ -104,8 +87,10 @@ img /*responsive images*/{
 
 /* Content */
 .content {
-   padding: 10px;
+	margin: auto; 
+	width: 80%; 
 }
+ 
 
 footer { 
     font-size: 80%; 
