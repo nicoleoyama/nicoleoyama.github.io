@@ -12,19 +12,19 @@
 
 /* main layout */
 body {
-	background-color: #1d3557;
+	background-color: #162521;
 	font-family: 'Nunito', sans-serif;
   font-size: 1em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
-	color: #a8dadc;
+	color: #EBECEC;
 	width: 100%;
 	line-height: 1em;
 	
 }
 
-h1 { color:  #548FE0; } 
-h2 { color: #548FE0; } 
+h1 { color:  #49B699; } 
+h2 { color: #49B699; } 
  
 .wrapper { 
   width: min(100% - 30px, 1000px);
@@ -104,6 +104,6 @@ footer {
 
 /* links */
 a {   font-weight: bold; text-decoration: none;}
-a:link { color:   #457b9d; text-decoration: none;}
+a:link { color:   #65A796; text-decoration: none;}
 a:visited { color:  #ccc; text-decoration: none;}
 a:hover { color: #fff; text-decoration: none; border-bottom: 1px dotted;}
