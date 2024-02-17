@@ -13,12 +13,12 @@
 
 /* main layout */
 body {
-	background-color: #e5e9ec;
+	background-color: #598392;
 	font-family: 'Nunito', sans-serif;
   font-size: calc(15px + 0.390625vw);
 	margin: 0 1em;
 	overflow-wrap: break-word;
-	color: #3e3f41;
+	color: #01161e;
 	width: 100%;
 	
 }
@@ -29,6 +29,7 @@ body {
 }
  
 .wrapper { 
+ background-color: #aec3b0;
   width: min(100% - 30px, 1000px);
   margin-inline: auto;
 }
