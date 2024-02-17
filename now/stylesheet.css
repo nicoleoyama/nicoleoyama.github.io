@@ -43,12 +43,12 @@ img /*responsive images*/{
   
 /* when you select something and the background color that pops up*/
 ::-moz-selection {
-	background:#fe6e6e;
+	background:#49B699;
 	color: #fff;
 }
 
 ::selection {
-	background: #fe6e6e;
+	background: #49B699;
 	color: #fff;
 }
  
