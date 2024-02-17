@@ -1,6 +1,7 @@
 /* 2023 Nicole Oyama Portfolio Design
  * Last updated: 02/14/24
- * 
+ * bg color navy: #343A40
+* txt color: #F1F2F3
  * 
  */
 
@@ -13,12 +14,12 @@
 
 /* main layout */
 body {
-	background-color: #AD6A6C;
+	background-color: #343A40;
 	font-family: 'Nunito', sans-serif;
   font-size: 1em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
-	color: #5D2E46;
+	color: #F1F2F3;
 	width: 100%;
 	line-height: 1em;
 	
@@ -105,6 +106,6 @@ footer {
 
 /* links */
 a {   font-weight: bold; text-decoration: underline;}
-a:link { color:  #305252; text-decoration: underline;}
-a:visited { color: #78C9C9; text-decoration: underline;}
-a:hover { color: #373E40; text-decoration: underline;}
+a:link { color:   #F783AC; text-decoration: underline;}
+a:visited { color:  #F1F2F3; text-decoration: underline;}
+a:hover { color: #fff; text-decoration: underline;}
