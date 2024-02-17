@@ -102,7 +102,7 @@ footer {
 }
 
 /* links */
-a {   font-weight: bold; text-decoration: none;}
-a:link { color:  #305252; text-decoration: none;}
-a:visited { color: #78C9C9; text-decoration: none;}
+a {   font-weight: bold; text-decoration: underline;}
+a:link { color:  #305252; text-decoration: underline;}
+a:visited { color: #78C9C9; text-decoration: underline;}
 a:hover { color: #373E40; text-decoration: underline;}
