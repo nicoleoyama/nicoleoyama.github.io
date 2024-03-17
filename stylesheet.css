@@ -44,6 +44,14 @@ body {
 	text-align: center;
 }
 
+b, strong {
+    text-decoration: underline;
+    text-decoration-color: var(--code);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.5rem;
+    text-underline-offset: -0.25rem;
+}
+
 img /*responsive images*/{ 
   max-width: 100%;
   height: auto;
