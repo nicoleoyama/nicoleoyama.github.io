@@ -1,5 +1,5 @@
-/* 2023 Nicole Oyama Portfolio Design
- * Last updated: 02/14/24
+/* 2024 Nicole Oyama Portfolio Design
+ * Last updated: 03/17/24
  * 
  * 
  */
@@ -46,7 +46,7 @@ body {
 
 b, strong {
     text-decoration: underline;
-    text-decoration-color: var(--code);
+    text-decoration-color: #4ca39a;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;
