@@ -100,10 +100,4 @@ footer {
   .column {
     width: 100%;
   }
-}
-
-/* links */
-a {   font-weight: bold; text-decoration: none;}
-a:link { color:   #FA8690; text-decoration: none;}
-a:visited { color:  #B35E65; text-decoration: none;}
-a:hover { color: #fff; text-decoration: none; border-bottom: 1px dotted;}
+} 
