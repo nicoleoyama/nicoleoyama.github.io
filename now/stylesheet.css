@@ -12,14 +12,14 @@
 
 /* main layout */
 body {
-	background-color: #162521;
+	background-color: #F8F9F9;
 	font-family: 'Nunito', sans-serif;
-  font-size: 1em;
+  font-size: 1.5em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
-	color: #EBECEC;
+	color: #2E4053;
 	width: 100%;
-	line-height: 1em;
+	line-height: 1.5em;
 	
 }
 
