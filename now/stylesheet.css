@@ -13,8 +13,8 @@
 /* main layout */
 body {
 	background-color: #F8F9F9;
-	font-family: 'Nunito', sans-serif;
-  font-size: 1.5em;
+	font-family: 'Nunito', sans-serif; 
+	font-size:1.2rem
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #2E4053;
