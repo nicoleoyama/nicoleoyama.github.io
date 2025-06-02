@@ -1,18 +1,11 @@
-function parseGoogleDoc() {
-  // Open the Google Document by its ID
-  var docId = "YOUR_DOCUMENT_ID"; // Replace with your Google Doc ID
+function parseGoogleDoc() { 
+  var docId = "2PACX-1vSCJGXDu491Y3rRgJPVhtdsY5ivkbQ5FJMDvPyanh2F7HNk2cea9AZIHa1j-RShETAsCxKqqbZ_Vz7J";  
   var doc = DocumentApp.openById(docId);
-
-  // Get the body of the document
+ 
   var body = doc.getBody();
-
-  // Extract the text content
-  var text = body.getText();
-
-  // Log the text content to the console
-  Logger.log(text);
-
-  // Example: Split the text into paragraphs
+ 
+  var text = body.getText(); 
+  Logger.log(text); 
   var paragraphs = body.getParagraphs();
   paragraphs.forEach(function(paragraph) {
     Logger.log(paragraph.getText());
