@@ -2,26 +2,28 @@
 <html lang="en">
 <html>
 <head> 
-<script>
-function parseGoogleDoc() { 
-  var docId = "2PACX-1vSCJGXDu491Y3rRgJPVhtdsY5ivkbQ5FJMDvPyanh2F7HNk2cea9AZIHa1j-RShETAsCxKqqbZ_Vz7J";  
-  var doc = DocumentApp.openById(docId);
- 
-  var body = doc.getBody();
- 
-  var text = body.getText(); 
-  Logger.log(text); 
-  var paragraphs = body.getParagraphs();
-  paragraphs.forEach(function(paragraph) {
-    Logger.log(paragraph.getText());
-  });
+
+<script> 
+function Data(response) {
+  document.Team.tName.value = response.feed.entry[0].gs$cell.$t;
 }
-</script> 
+</script>
+
+  
 </head>
 
 
   <body>
-
+<table>             
+    <form name="Team">
+    <tr>                
+        <td>
+        <input  size="19"  name="tName" readonly >
+        </td>               
+    </tr>
+    </form>
+    </table>
+<script src="https://docs.google.com/document/d/e/2PACX-1vSCJGXDu491Y3rRgJPVhtdsY5ivkbQ5FJMDvPyanh2F7HNk2cea9AZIHa1j-RShETAsCxKqqbZ_Vz7J/pub"></script>
 
 
 
