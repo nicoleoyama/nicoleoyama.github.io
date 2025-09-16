@@ -9,7 +9,35 @@
 
   
 
-   left, .right {
+ @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+ 
+* {
+  box-sizing: border-box;
+}
+
+/* main layout */
+body {
+	background-color: #fff;
+	font-family: 'Nunito', sans-serif;
+  font-size: calc(15px + 0.390625vw);
+	margin: 0 1em;
+	overflow-wrap: break-word;
+	color: #3e3f41;
+	width: 100%;
+	
+}
+
+.caption-style {
+	padding: 5px;
+	margin: 10px;
+}
+ 
+.wrapper { 
+  width: min(100% - 30px, 1000px);
+  margin-inline: auto;
+}
+left, .right {
 float: left;
 width: 20%;
 }
@@ -22,10 +50,7 @@ width: 60%;
 width: 100%;
 }
 } 
-
-  body { 
-   background-color: #fff;
-  }
+ 
    li {  
     display: block; 
     list-style-type: number;
