@@ -111,7 +111,8 @@
 
   
   
-&copy; 2024 Nicole Oyama 
+<p>&copy; <span id="current-year"></span> Nicole Oyama. All rights reserved.</p>
+
 </div>
 </div> 
  
@@ -121,6 +122,10 @@
      
      
   </div> 
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
 </body>
 
 </html>
