@@ -15,7 +15,7 @@
 body {
 	background-color: #e5e9ec;
 	font-family: 'Nunito', sans-serif;
-  font-size: calc(15px + 0.390625vw);
+  font-size:1.4em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #3e3f41;
