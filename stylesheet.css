@@ -59,13 +59,13 @@ img /*responsive images*/{
  
 /* lists and nav #primary-menu so only the menu is inline and other lists are not*/
 
-#primary-menu ul  {
+.menu ul  {
 	display: inline;
 }
 
-#primary-menu li {
+.menu li {
 	list-style-type: none;	
-	margin-left:20px;
+	margin-left:10px;
 	padding: 0;
 	float: left;
 }
