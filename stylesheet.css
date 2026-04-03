@@ -17,7 +17,6 @@ body {
 	font-family: 'Nunito', sans-serif;
   font-size:1.4em;
 	margin: 0 1em;
-	overflow-wrap: break-word;
 	color: #3e3f41;
 	width: 100%;
 	
@@ -63,8 +62,8 @@ img /*responsive images*/{
 .menu li {
 	list-style: none;	
 	margin-left:20px;
-	display: inline;
-	padding: 0;
+	display: inline-block;
+	padding: 10px;
 	float: left;
 }
 
