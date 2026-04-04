@@ -80,7 +80,6 @@ body {
 
 h1 {
   color: white;
-  font-family: "Rubik", sans-serif;
   font-size: clamp(2em, 2vw, 4em);
   font-weight: 400;
   margin: 0px;
