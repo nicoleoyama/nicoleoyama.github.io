@@ -29,7 +29,7 @@ body {
 }
 
 .wrapper { 
-  width: min(100% - 30px, 9000px);
+  width: min(100% - 30px, 900px);
   margin-inline: auto;
 }
 
