@@ -30,9 +30,7 @@ body {
 
 .wrapper { 
 	 display: flex;
-  flex-wrap: wrap;
- /* width: min(100% - 30px, 900px);*/
-  margin-inline: auto;
+  flex-wrap: wrap; 
 }
 
 #cards {
