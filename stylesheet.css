@@ -51,7 +51,7 @@ body {
 
 b, strong {
     text-decoration: underline;
-    text-decoration-color: #4ca39a;
+    text-decoration-color: var(--ds-teal-700);
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;
@@ -75,7 +75,7 @@ img /*responsive images*/{
 
 /* when you select something and the background color that pops up*/
 ::-moz-selection {
-	background:#fe6e6e;
+	background: var(--ds-teal-700);
 	color: #fff;
 }
 
@@ -110,6 +110,10 @@ footer {
 
 /* links */
 a {   font-weight: bold; }
-a:link { color: #4ca39a; }
-a:visited { color: #aaa5cb;}
-a:hover { color: #3e3f41;}
+a:link { color: var(--ds-teal-700); }
+a:visited { color: var(--ds-pink-700);}
+a:hover { color: #000; text-decoration: underline;
+    text-decoration-color: var(--ds-teal-700);
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 0.5rem;
+    text-underline-offset: -0.25rem;}
