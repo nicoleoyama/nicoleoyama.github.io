@@ -12,9 +12,6 @@
 }
 
 /* main layout */
-
-  
-/* main layout */
 body {
 	background-color: #e5e9ec;
 	font-family: 'Nunito', sans-serif;
@@ -32,7 +29,7 @@ body {
 }
 
 .wrapper { 
-  width: min(100% - 30px, 1000px);
+  width: min(100% - 30px, 9000px);
   margin-inline: auto;
 }
 
