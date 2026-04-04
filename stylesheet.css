@@ -49,8 +49,9 @@
 }
 
 body {
-  background-color: rgb(10, 10, 10);
-  display: grid;
+  background-color: rgb(10, 10, 10);  
+	font-family: "Nunito", sans-serif;  
+	/*display: grid;*/
   height: 100vh;
   margin: 0px;
   /*overflow: hidden;*/
