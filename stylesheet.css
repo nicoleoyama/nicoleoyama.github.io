@@ -14,10 +14,10 @@
 /* main layout */
 
 body {
-  background-color: rgb(10, 10, 10);  
+  background-color: #fff;
+	color: #000;
 	font-family: "Nunito", sans-serif; 
   margin: 0px;
-  overflow: hidden;
 }
 
 
