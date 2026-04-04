@@ -57,7 +57,7 @@ body {
 
 b, strong {
     text-decoration: underline;
-    text-decoration-color: var(--ds-teal-700);
+    text-decoration-color: #00695C);
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;
@@ -81,7 +81,7 @@ img /*responsive images*/{
 
 /* when you select something and the background color that pops up*/
 ::-moz-selection {
-	background: var(--ds-teal-700);
+	background: #00695C;
 	color: #fff;
 }
 
@@ -116,10 +116,10 @@ footer {
 
 /* links */
 a {   font-weight: bold; }
-a:link { color: var(--ds-teal-700); }
-a:visited { color: var(--ds-pink-700);}
+a:link { color: #00695C }
+a:visited { color: #7B1FA2;}
 a:hover { color: #000; text-decoration: underline;
-    text-decoration-color: var(--ds-teal-700);
+    text-decoration-color: #00695C;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;}
