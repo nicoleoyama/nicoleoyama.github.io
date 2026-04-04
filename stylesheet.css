@@ -12,15 +12,7 @@
 }
 
 /* main layout */
-body {
-	background-color: #e5e9ec;
-	font-family: 'Nunito', sans-serif;
-  font-size:1.4em;
-	margin: 0 1em;
-	color: #3e3f41;
-	width: 100%;
-	
-}
+ 
 
 .caption-style {
 	padding: 5px;
@@ -80,6 +72,8 @@ body {
 
 h1 {
   color: white;
+	
+	font-family: 'Nunito', sans-serif;
   font-size: clamp(2em, 2vw, 4em);
   font-weight: 400;
   margin: 0px;
