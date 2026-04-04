@@ -13,14 +13,28 @@
 
 /* main layout */
 
+  
+/* main layout */
 body {
-  background-color: #fff;
-	color: #000;
-	font-family: "Nunito", sans-serif; 
-  margin: 0px;
+	background-color: #e5e9ec;
+	font-family: 'Nunito', sans-serif;
+  font-size:1.4em;
+	margin: 0 1em;
+	overflow-wrap: break-word;
+	color: #3e3f41;
+	width: 100%;
+
 }
 
+.caption-style {
+	padding: 5px;
+	margin: 10px;
+}
 
+.wrapper { 
+  width: min(100% - 30px, 1000px);
+  margin-inline: auto;
+}
 
 .center-text { 
 	text-align: center;
