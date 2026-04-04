@@ -77,7 +77,7 @@ body {
 
 b, strong {
     text-decoration: underline;
-    text-decoration-color: #00695C);
+    text-decoration-color: #00695C;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;
@@ -136,7 +136,7 @@ footer {
 
 /* links */
 a {   font-weight: bold; }
-a:link { color: #00695C }
+a:link { color: #00695C; }
 a:visited { color: #7B1FA2;}
 a:hover { color: #000; text-decoration: underline;
     text-decoration-color: #00695C;
