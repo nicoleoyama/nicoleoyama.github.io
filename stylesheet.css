@@ -31,8 +31,20 @@ body {
 .wrapper { 
 	 display: flex;
   flex-wrap: wrap;
-  width: min(100% - 30px, 900px);
+ /* width: min(100% - 30px, 900px);*/
   margin-inline: auto;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+#cards > article {
+  flex: none;
+  width: 20em;
 }
 
 .center-text { 
