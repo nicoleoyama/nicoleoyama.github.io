@@ -53,7 +53,7 @@ body {
   display: grid;
   height: 100vh;
   margin: 0px;
-  overflow: hidden;
+  /*overflow: hidden;*/
   place-items: center;
 }
 
