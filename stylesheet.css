@@ -28,19 +28,7 @@ body {
 }
 
 
-   :root {
-        --grid-line: #e5e7eb;
-        --grid-cross: #9ca3af;
-        --text-muted: #555862;
-        --boyut-primary: #000;
-        --boyut-primary-fg: #fff;
-        --boyut-primary-hover: #27272a;
-        --boyut-secondary: #fff;
-        --boyut-secondary-fg: #000;
-        --boyut-secondary-hover: #f4f4f5;
-        --brand-accent:#a90432
-    }
-
+  
 
 
 
@@ -51,12 +39,7 @@ body {
 
 #about {
   
-	position: sticky;
-top: 56px;
-z-index: 49;
-width: 100%;
-height: 1px;
-background: var(--grid-line);
+
 }
 
 #portfolio { 
