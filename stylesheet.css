@@ -27,6 +27,23 @@ body {
   margin: 0;
 }
 
+
+   :root {
+        --grid-line: #e5e7eb;
+        --grid-cross: #9ca3af;
+        --text-muted: #555862;
+        --boyut-primary: #000;
+        --boyut-primary-fg: #fff;
+        --boyut-primary-hover: #27272a;
+        --boyut-secondary: #fff;
+        --boyut-secondary-fg: #000;
+        --boyut-secondary-hover: #f4f4f5;
+        --brand-accent:#a90432
+    }
+
+
+
+
 .caption-style {
 	padding: 5px;
 	margin: 10px;
