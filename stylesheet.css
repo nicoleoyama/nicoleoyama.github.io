@@ -121,19 +121,6 @@ footer {
     font-size: 80%; 
     margin-bottom: 4em;
 }
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 900px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
 
 /* links */
 a {   font-weight: bold; }
