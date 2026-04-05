@@ -19,9 +19,12 @@ body {
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #3e3f41;
- display: grid;
-place-items: center;
-min-height: 100dvh;
+
+	  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
 .caption-style {
@@ -30,9 +33,12 @@ min-height: 100dvh;
 }
 
 #about {
- width: 100%;
-	margin: 0 auto;
+ width: 800px;
 	
+}
+
+#portfolio { 
+ width: 800px;
 }
 
 .wrapper { 
