@@ -6,93 +6,123 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+html {
+  --night-color: #272751;
+  --day-color: white;
+  --night-background: radial-gradient(circle at top left,#50507f,#272751);
+  --transition-time: 0.5s;
+}
 
-  gtag('config', 'UA-12011571-1');
-</script>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<script type="module" src="sparkly-text.js"></script>
- <style>
- 
-* {box-sizing: border-box;}
+.center-by-all-means {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimensions(@ht, @wt) {
+  height: @ht;
+  width: @wt;
+}
 
 body {
- 
-  transition: background 0.2s linear;
+ overflow-x: hidden;
 }
 
-body.dark {background-color: #292c35;} /* #9b59b6 */
+.container {
+  .dimensions(100vh, 100vw);
+  .center-by-all-means();
+  
+  .switch {
+    position: relative;
+    .center-by-all-means();
 
-body.dark h1, body.dark .support a {color: #fff;}
+    .slider {
+      position: absolute;
+      .dimensions(60px, 120px);
+      border-radius: 30px;
+      background-color: var(--night-color);
+      cursor: pointer;
+      transition: var(--transition-time);
+      z-index: 99;
 
-.checkbox {
+      &:before {
+        position: absolute;
+        left: 5px;
+        bottom: 5px;
+        .dimensions(50px, 50px);
+        content: "";
+        border-radius: 50%;
+        background-color: var(--day-color);
+        transition: var(--transition-time);
+      }
+    } 
+  }
+}
+
+#toggle {
   opacity: 0;
+  touch-action: none;
+  
+  &:checked {
+    & ~ .slider {
+      background-color: var(--day-color);
+    }
+    & ~ .slider:before {
+      background-color: var(--day-color);
+      box-shadow: inset -20px -10px 0 0px var(--night-color);
+      transform: translate(60px, 1px);
+    }
+    & ~ .slide-block{
+      left: 0;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+}
+
+.slide-block {
+  .dimensions(100vh, 150vw);
   position: absolute;
+  top: 0;
+  background: var(--night-background);
+  transition: var(--transition-time);
+  
+  &.slide-out {
+    left: -150vw;
+    border-bottom-right-radius: 100%;
+    border-top-right-radius: 100%;
+  }
+
+  &.slide-in {
+    left: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
 }
 
-.checkbox-label {
-  background-color: #111;
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.fa-moon {color: #f1c40f;}
-
-.fa-sun {color: #f39c12;}
-
-.checkbox-label .ball {
-  background-color: #fff;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
-}
-
-.checkbox:checked + .checkbox-label .ball {
-  transform: translateX(24px);
-}
-
-
-
-
-
-
-
-
-
-/*  Support me if you like it */
-.support {
-	position: absolute;
-	right: 20px;
-	bottom: 20px;
-}
-
-.support a {
-  color: #292c35;
-  font-size: 32px;
-  backface-visibility: hidden;
-  display: inline-block;
-  transition: transform 0.2s ease;
-}
-
-.support a:hover{
-  transform: scale(1.1);
-}
  </style>
 
+  <script>
+	 window.onload = function() {
+  const toggle = document.getElementById('toggle');
+  const slideBlock = document.getElementsByClassName('slide-block')[0];
   
+  toggle.addEventListener('change', function(e) {
+    if(e.target.checked) {
+      slideBlock.className = slideBlock.className.replace('slide-out', 'slide-in');
+    } else {
+      slideBlock.className = slideBlock.className.replace('slide-in', 'slide-out');
+    }
+  });
+};
+
+</script>
   
 </head>
 
@@ -105,19 +135,17 @@ body.dark h1, body.dark .support a {color: #fff;}
   <div class="responsive-two-column-grid">
    <div> 
      <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
-     <script>
-    const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark")
-})
-  </script>
-     <input type="checkbox" class="checkbox" id="checkbox">
-  <label for="checkbox" class="checkbox-label">
-    <i class="fas fa-moon"></i>
-    <i class="fas fa-sun"></i>
-    <span class="ball"></span>
+      
+	   
+	   <div class="container">
+  <label class="switch">
+    <input id="toggle" type="checkbox">
+    <span class="slider"></span>
   </label>
-    
+</div>
+<div class="slide-block slide-out">
+</div>
+
 
     </div>
    
