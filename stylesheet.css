@@ -40,7 +40,7 @@ body {
   pointer-events:none;
 }
 
-.grid-background {
+.grid-background body {
   --i: 2rem; /* grid interval */
   --w: 1.5px; /* gridline width */
   &:before {
