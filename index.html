@@ -92,12 +92,7 @@ body.dark h1, body.dark .support a {color: #fff;}
 }
  </style>
 
-  <script>
-    const checkbox = document.getElementById("checkbox")
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("dark")
-})
-  </script>
+  
   
 </head>
 
@@ -110,7 +105,12 @@ checkbox.addEventListener("change", () => {
   <div class="responsive-two-column-grid">
    <div> 
      <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
-     
+     <script>
+    const checkbox = document.getElementById("checkbox")
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("dark")
+})
+  </script>
      <input type="checkbox" class="checkbox" id="checkbox">
   <label for="checkbox" class="checkbox-label">
     <i class="fas fa-moon"></i>
