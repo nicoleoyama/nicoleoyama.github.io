@@ -15,223 +15,59 @@
 
 <script type="module" src="sparkly-text.js"></script>
 
- <style>
-   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-:root {
-    --DM_Sans: DM_Sans;
-    --Purple1: hsl(254, 88%, 90%);
-    --Purple2: hsl(256, 80%, 59%);
-    --Yellow1: hsl(31, 66%, 93%);
-    --Yellow2: hsl(39, 100%, 71%);
-    --White: hsl(0, 0%, 100%);
-    --Black: hsl(0, 100%, 7%);
-}
-
-body{
-  display: grid;
-  place-content: center;
-  background-color: var(--White);
-  font-family: 'DM Sans';
-  padding: 3rem;
-  letter-spacing: 0;
-}
-
-.grid-container{
-    display: grid;
-    width: 100%;
-    max-width: 900px;
-    grid-template-columns:  repeat(4, 180px);
-    grid-template-rows: repeat(7, 200px);
-    gap: 1rem;
-    grid-template-areas: 
-      "item1 item2 item2 item3"
-      "item1 item2 item2 item3"
-      "item1 item5 item6 item3"
-      "item4 item5 item6 item3"
-      "item4 item7 item8 item8"
-      "item4 item7 item8 item8";
-  }
-
-/* Shared Style for All Boxes */
-.grid-container > div {
-    border-radius: 0.5rem;
-    padding:1.25rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
-  }
-
-p {
-  color: var(--Black);
-  font-size: 1rem;
-  margin-top: 1rem;
-}
-
-img {
+<style>
+ 
+  .grid {
+  background: hsl(36, 100%, 99%);
   width: 100%;
-  border-radius: 0.65rem;
-  margin-top: 0.65rem;
+  max-width: 1500px;
+  height: 1000px;
+  display: grid;
+  gap: 1.5vw;
+  padding: 1vw;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "hero hero hero hero aside2 aside2"
+    "hero hero hero hero aside2 aside2"
+    "hero hero hero hero aside2 aside2"
+    "hero hero hero hero aside2 aside2"
+    "aside3 aside3 aside4 aside4 aside5 aside5 ";
+}
+  .item {
+  border: 2px solid #464545;
+  border-radius: 5px;
 }
 
-/* Unique Box styling (Optional) */
-
-/*BOX1 STYLING*/
-.item1 {
-  background-color: var(--Yellow1);
-  grid-area: item1;
-  text-align: left;
-  line-height: 1.3rem;
+.grid .item:nth-child(1) {
+  grid-area: hero;
+}
+.grid .item:nth-child(2) {
+  grid-area: aside2;
 }
 
-h2 span{
-  color: var(--Purple2);
-  font-style: italic;
-} 
-
-.button1{
-  color: var(--Purple2);
-  font-size: bold;
-  background-color: var(--Yellow2);
-  padding: 1rem 1.2rem;
-  border: none;
-  border-radius: 1.5rem;
-  font-weight: 800;
-  font-size: 0.9rem;
-  margin-top: 0.9rem;
-  cursor: pointer;
+.grid .item:nth-child(3) {
+  grid-area: aside3;
+}
+.grid .item:nth-child(4) {
+  grid-area: aside4;
 }
 
-.button1:hover {
-  background-color: var(--Purple1);
+.grid .item:nth-child(5) {
+  grid-area: aside5;
 }
 
-/*BOX2 STYLING*/
-.item2 {
-  background-color: var(--Purple2);
-  text-align: center;
-  grid-area: item2;
-  color: var(--White);
+  @media screen and (max-width: 1000px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+      "hero   hero   hero   hero"
+      "hero   hero   hero   hero"
+      "aside2 aside2 aside2 aside3"
+      "aside4 aside4 aside5 aside5";
+  }
 }
-.item2 h1{
-  margin-top: 0.8rem;
-  line-height: 2rem;
-}
-
-.item2 p {
-  color: var(--White);
-  font-size: 0.6rem;
-  margin-top: 0;
-}
-
-.item2 span{
-  color: var(--Yellow2);
-} 
-.item2 img {
-  width: 40%;
-  border-radius: 0.5rem;
-  margin-top: 0.65rem;
-}
-
-/*BOX3 STYLING*/
-.item3 {
-  background-color: var(--Purple1);
-  padding-top: 0.65rem;
-  text-align: left;
-  grid-area: item3;
-  line-height: 1rem;
-  overflow: hidden;
-}
-
-.item3 img{
-  width:230px;
-  margin-top: 0.65rem;
-  padding-left: 0.8rem;
-  height: 60%;
-}
-
-
-/*BOX4 STYLING*/
-.item4 {
-  background-color: var(--Yellow2);
-  text-align: left;
-  grid-area: item4;
-  line-height: 1.5rem;
-}
-
-.item4 h2{
-  color: var(--Black);
-}
-.item4 img{
-  margin-top: 1.5rem;
-}
-
-/*BOX5 STYLING*/
-.item5 {
-  background: var(--White);
-  padding-top: 10px;
-  text-align: left;
-  grid-area: item5;
-  line-height: 1.3rem;
-}
-
-.item6 {
-  background: var(--Yellow2);
-  text-align: left;
-  grid-area: item6;
-  line-height: 1.3rem;
-  overflow: hidden;
-}
-.item6 img{
-  padding-top: 0.65rem;
-}
-
-.item7 {
-  background: var(--White);
-  padding-top: 1rem;
-  text-align: left;
-  grid-area: item7;
-  line-height: 1.2rem;
-}
-
-.item7 img{
-  margin-top: 1.5rem;
-}
-
-.item8 {
-  display: flex;
-  background-color: var(--Purple2);
-  grid-area: item8;
-  line-height: 1.5rem;
-  color: var(--White);
-}
-.item8 h2{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Responsive tweaks*/
-@media (max-width: 900px){
-  .grid-container{
-    grid-template-columns:  repeat(1, 360px);
-    grid-template-rows: repeat(8, 200px);
-    grid-template-areas: 
-        "item2"
-        "item5"
-        "item6"
-        "item3"
-        "item8"
-        "item7"
-        "item1"
-        "item4";
- }
-}
- </style>
+</style>
 
 </head>
 
@@ -254,87 +90,40 @@ h2 span{
   
     </div>
 
-    
-
-<div id="portfolio">
-
-
-  
  
-
-   <div class="grid-container">
-        <!--BOX 1-->
-        <div class="item1">
-
-            I am a web designer, crocheter and artist. I enjoy being creative and  You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page for some updates.
-           
-        </div>
-
-        <!--BOX 2-->
-        <div class="item2">
-
+    <div class="grid">
+      <div class="item">  I am a web designer, crocheter and artist. I enjoy being creative and  You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page for some updates.
+           </div>
+      <div class="item">
+ 
           
 <a href="http://nicoleoyama.neocities.org"><img src="images/neocities.jpg" border="0" /></a> 
           <br />
 <strong>Y2k -  </strong> A vintage looking website done in modern Web Design rules 
-    
-        </div>
-
-        <!--BOX 3-->
-        <div class="item3">
-         
+    </div>
+      <div class="item">
  
 <img src="images/thelittleshiro.jpg" />
                 <br />
 <strong>Little Shiro &amp; Maki - </strong>A website for Shiro the Straight Ear Scottish Fold who went viral in 2011 for "Shiro vs. The Chair."
- 
-        </div>
-
-        <!--BOX 4-->
-        <div class="item4">
-         
+ </div>
+      <div class="item">         
 <img src="images/shiroyoutube.jpg" />
                 <br />
 <strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki
-        </div>
-
-         <!--BOX 5-->
-         <div class="item5">
-          
+        </div></div>
+      <div class="item">
+ 
   
 <img src="images/nasfiahtung.jpg" />
                  <br />
-<strong>Nafisah Tung - </strong>A portfolio site for Nafisah Tung.
-        </div>
-
-        <!--BOX 6-->
-        <div class="item6">
-                
-<img src="images/shiroyoutube.jpg" />
-                <br />
-<strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki.
- 
-  
-
-        </div>
-
-         <!--BOX 7-->
-         <div class="item7">
-           
-<img src="images/expeng.jpg" />
-                 <br />
-  <strong>Exp Eng - </strong>A client project, website for an Engineering Company.
- 
-        </div>
-
-         <!--BOX 8-->
-         <div class="item8">
-            <img src="images/img8.webp">
-            <h2>Grow followers with non-stop content.</h2>
-        </div> 
+<strong>Nafisah Tung - </strong>A portfolio site for Nafisah Tung.</div>
     </div>
-    
+ 
 
+  
+  
+  
   
   
  
