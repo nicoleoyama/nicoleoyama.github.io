@@ -1,1 +1,107 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<title>Nicole Oyama Portfolio</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-12011571-1');
+</script>
+
+<script type="module" src="sparkly-text.js"></script>
+
+ 
+
+</head>
+
+<body>
+ 
+  <div class="wrapper"> 
+
+    <div id="about"> 
+  
+
+  <div class="responsive-two-column-grid">
+   <div> 
+      <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.</sparkly-text>  
+    </div>
+   
+    <div> 
+      I am a web designer, crocheter and artist. I enjoy being creative and  You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page for some updates.</div>
+</div>
+  
+    </div>
+
+<div id="portfolio">
+
+
+  <div className="flex gap-4">
+  {[
+    [24, 32, 32, 16, 16],
+    [32, 40, 56],
+    [64, 32, 32],
+  ].map((card, index) => (
+    <div className="flex-1" key={index}>
+      {card.map((height, index) => (
+        <div
+          className={`mb-4 h-${height} rounded-xl border-2 border-slate-400/10 bg-neutral-100 p-4 dark:bg-neutral-900`}
+          key={index}
+        ></div>
+      ))}
+    </div>
+  ))}
+</div>
+
+<a href="http://nicoleoyama.neocities.org"><img src="images/neocities.jpg" border="0" /></a> 
+<strong>Y2k -  </strong> A vintage looking website done in modern Web Design rules 
+  
+<img src="images/shiroyoutube.jpg" />
+<strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki.
+ 
+
+  
+ 
+<img src="images/thelittleshiro.jpg" />
+<strong>Little Shiro &amp; Maki - </strong>A website for Shiro the Straight Ear Scottish Fold who went viral in 2011 for "Shiro vs. The Chair."
+ 
+ 
+<img src="images/shiroyoutube.jpg" />
+<strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki
+  
+
+  
+<img src="images/nasfiahtung.jpg" />
+<strong>Nafisah Tung - </strong>A portfolio site for Nafisah Tung.
+
+<img src="images/expeng.jpg" />
+  <strong>Exp Eng - </strong>A client project, website for an Engineering Company.
+ 
+
+</div>
+
+
+<footer>
+  
+<p>&copy; <span id="current-year"></span> Nicole Oyama. All rights reserved.</p>
+
+ <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
+ 
+ </footer>
+     
+
+     
+     
+  </div> 
+
+ 
+</body>
+
+</html>
