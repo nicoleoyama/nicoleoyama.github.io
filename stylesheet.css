@@ -27,50 +27,6 @@ body {
 }
 
 
-.grid-background,
-.grid-background:before,
-.grid-background:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events:none;
-}
-
-.grid-background {
-  --i: 2rem; /* grid interval */
-  --w: 1.5px; /* gridline width */
-  &:before {
-    /* grid */
-    content: "";
-    background-size: var(--i) var(--i);
-    background-image: linear-gradient(
-        to right,
-        rgba(0 0 0 / 0.05) var(--w),
-        transparent var(--w)
-      ),
-      linear-gradient(
-        to bottom,
-        rgba(0 0 0 / 0.05) var(--w),
-        transparent var(--w)
-      );
-  }
-  &:after {
-    /* dots */
-    --p:calc(var(--w) * 0.5); /* position correction based on gridline width  */
-    --i2x:calc(var(--i) * 2); /* 2x grid interval for dots */
-    content: "";
-    background-position: var(--p) var(--p);
-    background-size: var(--i2x) var(--i2x);
-    background-image: radial-gradient(
-      circle,
-      rgba(0 0 0 / 0.2) var(--w),
-      transparent var(--w)
-    );
-  }
-}
-
  
 
 .caption-style {
