@@ -5,125 +5,91 @@
   <link rel="stylesheet" href="stylesheet.css">
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
+
 <style>
-html {
-  --night-color: #272751;
-  --day-color: white;
-  --night-background: radial-gradient(circle at top left,#50507f,#272751);
-  --transition-time: 0.5s;
-}
+	:root {
+  --darkbg: #251d29;
+  --darkt: #ffd1f7;
+  --lightbg: #fff;
+  --lightt: #d43370;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+  --toggleHeight: 16em;
+  --toggleWidth: 30em;
+  --toggleBtnRadius: 10em;
 
-.center-by-all-means {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  --bgColor--night: #423966;
+  --mooncolor: #d9fbff;
+  --bgColor--day: #9ee3fb;
 }
-
-.dimensions(@ht, @wt) {
-  height: @ht;
-  width: @wt;
-}
-
 body {
- overflow-x: hidden;
+  transition: all 0.2s ease-in-out;
+  background: var(--darkbg);
+  color: var(--darkt);
+  text-align: center;
 }
-
-.container {
-  .dimensions(100vh, 100vw);
-  .center-by-all-means();
-  
-  .switch {
-    position: relative;
-    .center-by-all-means();
-
-    .slider {
-      position: absolute;
-      .dimensions(60px, 120px);
-      border-radius: 30px;
-      background-color: var(--night-color);
-      cursor: pointer;
-      transition: var(--transition-time);
-      z-index: 99;
-
-      &:before {
-        position: absolute;
-        left: 5px;
-        bottom: 5px;
-        .dimensions(50px, 50px);
-        content: "";
-        border-radius: 50%;
-        background-color: var(--day-color);
-        transition: var(--transition-time);
-      }
-    } 
-  }
+.light {
+  background: var(--lightbg);
+  color: var(--lightt);
 }
-
-#toggle {
-  opacity: 0;
-  touch-action: none;
-  
-  &:checked {
-    & ~ .slider {
-      background-color: var(--day-color);
-    }
-    & ~ .slider:before {
-      background-color: var(--day-color);
-      box-shadow: inset -20px -10px 0 0px var(--night-color);
-      transform: translate(60px, 1px);
-    }
-    & ~ .slide-block{
-      left: 0;
-      border-bottom-right-radius: 0;
-      border-top-right-radius: 0;
-    }
-  }
+.tdnn {
+  cursor: pointer;
+  margin: 0 auto;
+  /*change size of toggle with font-size*/
+  font-size: 10%;
+  margin-top: 10em;
+  position: relative;
+  height: var(--toggleHeight);
+  width: var(--toggleWidth);
+  border-radius: var(--toggleHeight);
+  transition: all 500ms ease-in-out;
+  background: var(--bgColor--night);
 }
-
-.slide-block {
-  .dimensions(100vh, 150vw);
+.day {
+  background: #ffbf71;
+}
+.moon {
   position: absolute;
-  top: 0;
-  background: var(--night-background);
-  transition: var(--transition-time);
-  
-  &.slide-out {
-    left: -150vw;
-    border-bottom-right-radius: 100%;
-    border-top-right-radius: 100%;
-  }
-
-  &.slide-in {
-    left: 0;
-    border-bottom-right-radius: 0;
-    border-top-right-radius: 0;
-  }
+  display: block;
+  border-radius: 50%;
+  transition: all 400ms ease-in-out;
+  top: 3em;
+  left: 3em;
+  transform: rotate(-75deg);
+  width: var(--toggleBtnRadius);
+  height: var(--toggleBtnRadius);
+  background: var(--bgColor--night);
+  box-shadow: 3em 2.5em 0 0em var(--mooncolor) inset,
+    rgba(255, 255, 255, 0.1) 0em -7em 0 -4.5em,
+    rgba(255, 255, 255, 0.1) 3em 7em 0 -4.5em,
+    rgba(255, 255, 255, 0.1) 2em 13em 0 -4em,
+    rgba(255, 255, 255, 0.1) 6em 2em 0 -4.1em,
+    rgba(255, 255, 255, 0.1) 8em 8em 0 -4.5em,
+    rgba(255, 255, 255, 0.1) 6em 13em 0 -4.5em,
+    rgba(255, 255, 255, 0.1) -4em 7em 0 -4.5em,
+    rgba(255, 255, 255, 0.1) -1em 10em 0 -4.5em;
+}
+.sun {
+  top: 4.5em;
+  left: 18em;
+  transform: rotate(0deg);
+  width: 7em;
+  height: 7em;
+  background: #fff;
+  box-shadow: 3em 3em 0 5em #fff inset, 0 -5em 0 -2.7em #fff,
+    3.5em -3.5em 0 -3em #fff, 5em 0 0 -2.7em #fff, 3.5em 3.5em 0 -3em #fff,
+    0 5em 0 -2.7em #fff, -3.5em 3.5em 0 -3em #fff, -5em 0 0 -2.7em #fff,
+    -3.5em -3.5em 0 -3em #fff;
 }
 
- </style>
+</style>
 
-  <script>
-	 window.onload = function() {
-  const toggle = document.getElementById('toggle');
-  const slideBlock = document.getElementsByClassName('slide-block')[0];
-  
-  toggle.addEventListener('change', function(e) {
-    if(e.target.checked) {
-      slideBlock.className = slideBlock.className.replace('slide-out', 'slide-in');
-    } else {
-      slideBlock.className = slideBlock.className.replace('slide-in', 'slide-out');
-    }
-  });
-};
-
-</script>
-  
+	<script>
+		function tdnn() {
+  document.getElementsByClassName("moon")[0].classList.toggle("sun");
+  document.getElementsByClassName("tdnn")[0].classList.toggle("day");
+  document.getElementsByTagName("BODY")[0].classList.toggle("light");
+}
+	</script>
 </head>
 
 <body>
@@ -137,14 +103,10 @@ body {
      <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
       
 	   
-	   <div class="container">
-  <label class="switch">
-    <input id="toggle" type="checkbox">
-    <span class="slider"></span>
-  </label>
-</div>
-<div class="slide-block slide-out">
-</div>
+	     <div onclick="tdnn()" class="tdnn">
+    <div class="moon">
+    </div>
+  </div>
 
 
     </div>
