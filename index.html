@@ -7,119 +7,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
 <script type="module" src="sparkly-text.js"></script> 
 
-	<style>
-a {
-  --link-color: #4dd9d6;
-  text-decoration: none;
-  color: var(--link-color);
-  font-weight: bold;
-}
-p {
-  color: #4b556b;
-}
-h1, h2, h3 {
-  letter-spacing: -2px;
-  color: #3a3e61;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  margin: 3rem auto;
-  width: 100%;
-  max-width: 1200px;
-}
-.grid-features {
-  grid-column-gap: 2rem;
-  grid-row-gap: 2rem;
-  grid-template-rows: 1fr;
-  grid-template-columns: 4fr 3fr 3fr;
-  grid-auto-columns: 1fr;
-  display: grid;
-}
-.bento-card {
-  border-radius: 2.5rem;
-  flex-direction: column;
-  align-items: flex-start;
-  min-height: 15rem;
-  padding: 2rem;
-  display: flex;
-  position: relative;
-  background-color: #fff;
-  color: #060633;
-  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 7%);
-  text-wrap: balance;
-}
-.bento-card.cloud {
-  grid-area: 1 / 1 / 3 / 2;
-  padding: 3rem;
-}
-.bento-card.logo {
-  grid-area: 1 / 2 / 2 / 4;
-  background-image: linear-gradient(-225deg, #fffeff 0%, #d7fffe 100%);
-}
-.bento-card.logo h2 {
-  color: #38a5a2;
-}
-.bento-card.inbox {
-  background-image: linear-gradient(-225deg, #ffffff 0%, #dacceb 100%);
-}
-.bento-card.inbox h3 {
-  color: #8b5cca;
-}
-.bento-card.device { 
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.bento-card.device-2 { 
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.bento-card.ai-gen {
-  grid-area: 3 / 2 / 4 / 4;
-}
-.bento-card.ai-gen h2 {
-  font-size: 4rem;
-  text-wrap: balance;
-}
-.bento-card-description {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.bento-card h2 {
-  font-weight: 700;
-  font-size: 3.8rem;
-  line-height: 0.9;
-}
-.bento-card h3 {
-  font-weight: 600;
-  font-size: 2.6rem;
-}
-.bento-card p {
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.3;
-}
-
-/* Demo Styling */
-.credit {
-  margin-top: 5rem;
-  text-align: center;
-}
-
-.credit a {
-  color: #fff;
-  background-color: var(--link-color);
-  padding: 0.6rem 1rem;
-  border-radius: 8px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-
-	</style>
-
+ 
 
 	<script>
 		const checkbox = document.getElementById("checkbox")
@@ -135,10 +23,7 @@ checkbox.addEventListener("change", () => {
   <div class="wrapper"> 
 
     <div id="about"> 
-  <div class="container">
-  <div class="grid-features">
-    <div class="bento-card cloud">
-      <div class="bento-card-description">
+   
           <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
 		  
   <input type="checkbox" class="checkbox" id="checkbox">
@@ -148,42 +33,24 @@ checkbox.addEventListener("change", () => {
     <span class="ball"></span>
   </label>
       
-      </div>
-    </div><!-- .bento-card.cloud -->
-    <div class="bento-card logo">
-      <div class="bento-card-description">
+   
 
   I am a web designer, crocheter and artist. I enjoy being creative and  You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page for some updates.
 
-		  
-      </div>
-      <div class="bento-card-details logo">
-      </div>
-    </div><!-- .bento-card.logo -->
-    <div class="bento-card device">
-      <div class="bento-card-description">
+	</div>
 
+	  <div id="content">
 
 <a href="http://nicoleoyama.neocities.org"><img src="images/neocities.jpg" border="0" /></a> 
 <strong>Y2k -  </strong> A vintage looking website done in modern Web Design rules 
 
-		  
-      </div>
-    </div>
-    <div class="bento-card inbox">
-      <div class="bento-card-description">
-
-
-
+	 
   
 <img src="images/shiroyoutube.jpg" />
 <strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki.
  
 
-  
-		  
-      </div>
-      <div class="bento-card-details inbox">
+   
 
 
  
@@ -191,40 +58,25 @@ checkbox.addEventListener("change", () => {
 <strong>Little Shiro &amp; Maki - </strong>A website for Shiro the Straight Ear Scottish Fold who went viral in 2011 for "Shiro vs. The Chair."
  
 
-		  
-      </div>
-    </div>
-    <div class="bento-card device-2">
-		
+ 
   
 <img src="images/nasfiahtung.jpg" />
 <strong>Nafisah Tung - </strong>A portfolio site for Nafisah Tung.
 
-    </div>
-    <div class="bento-card ai-gen">
-      <div class="bento-card-description">
-
+  
  
 <img src="images/shiroyoutube.jpg" />
 <strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki
   
 
 
-
-		  
-      </div>
-      <div class="bento-card-details ai-gen">
+ 
 
 <img src="images/expeng.jpg" />
   <strong>Exp Eng - </strong>A client project, website for an Engineering Company.
  
-
-      </div>
-    </div>
-  </div>
-
-
  
+	  </div>
 </div>
 
 
@@ -237,7 +89,8 @@ checkbox.addEventListener("change", () => {
 </script>
  
  </footer>
-     
+
+	  
 
      
      
