@@ -110,39 +110,30 @@ h2 {
 
     </div>
 
-    <div class="item">
-		
-	<script>
-		window.onload=simple_local_time();
-	</script>
+  <div class="clock"></div>
+	  <script>
+		  function clock() {// We create a new Date object and assign it to a variable called "time".
+var time = new Date(),
+    
+    // Access the "getHours" method on the Date object with the dot accessor.
+    hours = time.getHours(),
+    
+    // Access the "getMinutes" method with the dot accessor.
+    minutes = time.getMinutes(),
+    
+    
+    seconds = time.getSeconds();
+
+document.querySelectorAll('.clock')[0].innerHTML = harold(hours) + ":" + harold(minutes) + ":" + harold(seconds);
   
-		<div id="timecontainer">
-  <label>Time : </label><br />
-  <span id="time"></span>
-			<script>
-				function simple_local_time(){
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-
-    var suffix = "AM";
-
-    if (hours >= 12) {
-        hours = hours -12;
-        suffix = "PM";
+  function harold(standIn) {
+    if (standIn < 10) {
+      standIn = '0' + standIn
     }
-
-    if (minutes < 10) {
-        minutes = "0" + minutes;
-    }
-    var time = hours + ":" + minutes + " " + suffix ;
-    jQuery("#time").text(time);
-    var t = setTimeout(simple_local_time, 500);
+    return standIn;
+  }
 }
-
-
-window.onload=simple_local_time();</script>
-</div>
+setInterval(clock, 1000);</script>
 		
     </div>
 
