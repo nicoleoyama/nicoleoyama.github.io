@@ -7,7 +7,82 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
 <script type="module" src="sparkly-text.js"></script> 
 
- 
+ <style>
+	 .bento-grid {
+  display: grid;
+  gap: var(--space);
+}
+
+@media (min-width: 50rem) {
+  .bento-grid {
+    grid-template-columns: repeat(var(--col-count, 3), 1fr);
+    grid-template-rows: repeat(var(--row-count, 3), auto);
+  }
+
+  .bento-grid > * {
+    grid-column: var(--col);
+    grid-row: var(--row);
+  }
+}
+
+/* --- Demo styles --- */
+:root {
+  --space: 1.25rem;
+  --text: #f8fafc;
+  --surface-1: #020617;
+  --surface-2: #0f172a;
+  --surface-3: #1e293b;
+  --gradient: linear-gradient(
+    20deg,
+    hsla(0 0% 0% / 0) 20%,
+    hsla(0 0% 100% / 0.065) 120%
+  );
+}
+
+* {
+  box-sizing: border-box;
+}
+
+section {
+  margin-inline: auto;
+  width: min(1000px, 100%);
+}
+
+section + section {
+  margin-block-start: 4rem;
+  padding-block-start: 4rem;
+  border-block-start: 2px dashed var(--surface-2);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.4;
+  color: var(--text);
+  background-color: var(--surface-1);
+  margin-block: 5rem;
+  padding-inline: var(--space);
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 1.65rem;
+  line-height: 1.1;
+}
+
+.item {
+  border: 1px solid var(--surface-3);
+  background-color: var(--surface-2);
+  background-image: var(--gradient);
+  padding: var(--space);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.item > * + * {
+  margin-block-start: 1.125rem;
+}
+
+ </style>
  
  
 </head>
@@ -17,52 +92,96 @@
   <div class="wrapper"> 
 
     <div id="content"> 
-   
-          <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
-		  
-  
-   
 
-  I am a web designer, crocheter and artist. I enjoy being creative and  You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page for some updates.
 
-	</div>
 
-	 
+
+		<section>
+  <div class="bento-grid">
+    <div class="item" style="--row: span 2">
+        <h1> <sparkly-text style="--sparkly-text-color:#FF69B4"> Hello! I'm Nicole.  </sparkly-text>  </h1>
+		
+  I am a web designer, crocheter and artist. I like to take a minimal and effective approach to my art. You can read my <a href="/blog">blog</a> or see my <a href="/now">now</a> page. You can also check out my online shops too.
+
+    </div>
+
+    <div class="item">
+      <h2>2. Distinctio alias</h2>
+      <p>Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+    </div>
+
+    <div class="item" style="--row: span 2">
+      <h2>3. Ullam unde dolores aliquid</h2>
+      <p>Consectetur adipisicing elit. Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti.</p>
+      <p>Consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="item">
+      <h2>4. Laudantium rerum deleniti</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+    </div>
+
+    <div class="item" style="--col: 2; --row: 2 / span 2">
+      <h2>5. Facere aut porro</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+      <p>Dicta at dolor sint, unde labore, numquam sunt id provident facilis architecto aspernatur quis officia veniam facere aut porro quidem. Molestiae, veritatis.</p>
+    </div>
+
+    <div class="item">
+      <h2>6. Consectetur</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="bento-grid">
+    <div class="item" style="--row: span 1">
+     
 
 <a href="http://nicoleoyama.neocities.org"><img src="images/neocities.jpg" border="0" /></a> 
 <strong>Y2k -  </strong> A vintage looking website done in modern Web Design rules 
 
-	 
+    </div>
+
+    <div class="item" style="--col: 2; --row: 1">
+  
   
 <img src="images/shiroyoutube.jpg" />
 <strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki.
- 
+		
+    </div>
 
-   
-
-
- 
-<img src="images/thelittleshiro.jpg" />
+    <div class="item" style="--row: span 3">
+      <img src="images/thelittleshiro.jpg" />
 <strong>Little Shiro &amp; Maki - </strong>A website for Shiro the Straight Ear Scottish Fold who went viral in 2011 for "Shiro vs. The Chair."
  
+    </div>
 
- 
-  
-<img src="images/nasfiahtung.jpg" />
+    <div class="item" style="--col: 1 / span 2; --row: 2 / span 2">
+      <img src="images/nasfiahtung.jpg" />
 <strong>Nafisah Tung - </strong>A portfolio site for Nafisah Tung.
+    </div>
 
-  
- 
-<img src="images/shiroyoutube.jpg" />
+    <div class="item">
+    <img src="images/shiroyoutube.jpg" />
 <strong>Little Shiro &amp; Maki Youtube - </strong>The Youtube design for Little Shiro and Maki
   
 
+    </div>
 
- 
-
+    <div class="item" style="--col: span 2">
+     
 <img src="images/expeng.jpg" />
   <strong>Exp Eng - </strong>A client project, website for an Engineering Company.
  
+    </div>
+  </div>
+</section>
+
+		
+   
+
   
 </div>
 
