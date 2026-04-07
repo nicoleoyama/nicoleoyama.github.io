@@ -82,8 +82,16 @@ h2 {
   margin-block-start: 1.125rem;
 }
 
+	 #timecontainer{
+  text-align:center;
+  font-size:32px;
+}
+
  </style>
- 
+
+	<script>
+		window.onload=simple_local_time();
+	</script>
  
 </head>
 
@@ -106,8 +114,11 @@ h2 {
     </div>
 
     <div class="item">
-      <h2>2. Distinctio alias</h2>
-      <p>Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+  
+		<div id="timecontainer">
+  <label>Time : </label><br />
+  <span id="time"></span>
+</div>
     </div>
 
     <div class="item" style="--row: span 2">
