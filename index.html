@@ -147,10 +147,20 @@ h2 {
     <div class="circle"></div> Latest Project
 
 		  <br />
+
+		  
 		  <script>
   const now = new Date(); // Creates a date object for the current moment
   const localTime = now.toLocaleTimeString(); // Formats it to the user's local settings
   document.getElementById('time-display').innerText = localTime;
+			  function updateClock() {
+    const now = new Date();
+    document.getElementById('time-display').innerText = now.toLocaleTimeString();
+}
+
+// Update the clock immediately and then every 1000 milliseconds (1 second)
+updateClock();
+setInterval(updateClock, 1000);
 </script>
 
 		  <p>Current local time: <span id="time-display"></span></p>
