@@ -145,6 +145,16 @@ h2 {
     <div class="item">
       <section class="container">
     <div class="circle"></div> Latest Project
+
+		  <br />
+		  <script>
+  const now = new Date(); // Creates a date object for the current moment
+  const localTime = now.toLocaleTimeString(); // Formats it to the user's local settings
+  document.getElementById('time-display').innerText = localTime;
+</script>
+
+		  <p>Current local time: <span id="time-display"></span></p>
+
    </section> 
 
 
