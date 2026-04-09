@@ -43,45 +43,14 @@ body {
   margin: 0 auto;
 }
 
-#cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
-  justify-content: center;
-}
-/*columns*/
-
-/* container */
-.responsive-two-column-grid {
-    display:block;
-}
-
-/* columns */
-.responsive-two-column-grid > * {
-    padding:1rem;
-}
-
-/* tablet breakpoint */
-@media (min-width:768px) {
-    .responsive-two-column-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-
-#cards > article {
-  flex: none;
-  width: 20em;
-}
-
+ 
 .center-text { 
 	text-align: center;
 }
 
 b, strong {
     text-decoration: underline;
-    text-decoration-color: #00695C;
+    text-decoration-color: #9B8EC7;
     text-decoration-skip-ink: none;
     text-decoration-thickness: 0.5rem;
     text-underline-offset: -0.25rem;
