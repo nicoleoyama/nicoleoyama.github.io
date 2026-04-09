@@ -10,13 +10,12 @@
 
 /* main layout */
 body {
-
+ background-color: #F2EAE0;
   font-size:1em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #3e3f41;
-
-	  display: flex;
+ display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
