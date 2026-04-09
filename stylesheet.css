@@ -11,7 +11,7 @@
 /* main layout */
 body {
 
-  font-size:1.4em;
+  font-size:1em;
 	margin: 0 1em;
 	overflow-wrap: break-word;
 	color: #3e3f41;
@@ -124,6 +124,7 @@ img /*responsive images*/{
 footer { 
     font-size: 80%; 
     margin-bottom: 4em;
+	text-align: center;
 }
 
 /* links */
