@@ -6,10 +6,12 @@
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12011571-1"></script>
 <script type="module" src="sparkly-text.js"></script> 
-
-	<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-
+ 
   <style>
+
+	  @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap'); 
+
+	  
  .bento-grid {
   display: grid;
   gap: var(--space);
@@ -55,15 +57,15 @@ section + section {
   padding-block-start: 4rem;
   border-block-start: 2px dashed var(--surface-2);
 }
-.victor-mono-<uniquifier> {
-  font-family: "Victor Mono", monospace;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-}
 
 
 body { 
+ 
+  font-family: "Victor Mono", monospace;
+  font-optical-sizing: auto; 
+  font-style: normal;
+ 
+
   line-height: 1.4;
   color: var(--text);
   background-color: var(--surface-1);
