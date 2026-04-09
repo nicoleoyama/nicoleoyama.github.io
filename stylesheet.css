@@ -128,7 +128,7 @@ footer {
 
 /* links */
 a {   font-weight: bold; }
-a:link { color: #9B8EC7; }
+a:link { color: #67bed9; }
 a:visited { color: #B4D3D9;}
 a:hover { color: #000; text-decoration: underline;
     text-decoration-color: #9B8EC7;
