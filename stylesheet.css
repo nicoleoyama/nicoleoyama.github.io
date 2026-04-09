@@ -28,17 +28,10 @@ body {
 	margin: 10px;
 }
 
-#about {
-  
-
-}
-
-#portfolio { 
-  
-}
+ 
 
 .wrapper { 
-	  max-width: 1200px;
+ max-width: 1200px;
   width: 90%; /* Keeps some padding on small screens */
   margin: 0 auto;
 }
