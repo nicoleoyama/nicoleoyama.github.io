@@ -10,27 +10,15 @@
   <style>
 	  
 @import url('https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap');   
- .bento-grid {
-  display: grid;
-  gap: var(--space);
-}
 
-@media (min-width: 50rem) {
-  .bento-grid {
-    grid-template-columns: repeat(var(--col-count, 3), 1fr);
-    grid-template-rows: repeat(var(--row-count, 3), auto);
-  }
+.bento-grid { display: grid; gap: var(--space); }
 
-  .bento-grid > * {
-    grid-column: var(--col);
-    grid-row: var(--row);
-  }
-}
+@media (min-width: 50rem) {  .bento-grid {  grid-template-columns: repeat(var(--col-count, 3), 1fr);  grid-template-rows: repeat(var(--row-count, 3), auto); }
+
+.bento-grid > * { grid-column: var(--col); grid-row: var(--row); } }
 
 /* --- Demo styles --- */
-:root {
-  --space: 1.25rem;
-  --text:  #464059;
+:root { --space: 1.25rem; --text:  #464059;
   --surface-1: #BDA6CE; /* this is the background color */
   --surface-2: #F2EAE0; /* maybe the bento bg color */
   --surface-3: #464059; /* text color? */
@@ -41,93 +29,29 @@
   );
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box;}
 
-section {
-  margin-inline: auto;
-  width: min(1000px, 100%);
-}
+section { margin-inline: auto; width: min(1000px, 100%);}
 
-section + section {
-  margin-block-start: 4rem;
-  padding-block-start: 4rem;
-  border-block-start: 2px dashed var(--surface-2);
-}
+section + section { margin-block-start: 4rem; padding-block-start: 4rem; border-block-start: 2px dashed var(--surface-2);}
 
+body { font-family: "Victor Mono", monospace; font-optical-sizing: auto;  font-style: normal; line-height: 1.4; color: #464059; /* var(--text) */ background-color: var(--surface-1);  margin-block: 5rem;  padding-inline: var(--space); }
 
-body { 
- 
-  font-family: "Victor Mono", monospace;
-  font-optical-sizing: auto; 
-  font-style: normal;
-  line-height: 1.4;
-  color: #464059; /* var(--text) */
-  background-color: var(--surface-1);
-  margin-block: 5rem;
-  padding-inline: var(--space);
-}
+h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 
-h2 {
-  font-weight: 600;
-  font-size: 1.65rem;
-  line-height: 1.1;
-}
+.item { border: 1px solid var(--surface-3); background-color: var(--surface-2); background-image: var(--gradient); padding: var(--space); border-radius: 0.5rem; text-decoration: none; }
 
-.item {
-  border: 1px solid var(--surface-3);
-  background-color: var(--surface-2);
-  background-image: var(--gradient);
-  padding: var(--space);
-  border-radius: 0.5rem;
-  text-decoration: none;
-}
- 
+.item > * + * { margin-block-start: 1.125rem; }
 
-.item > * + * {
-  margin-block-start: 1.125rem;
-}
+.container {  height: 100%; display: flex; justify-content: center; align-items: center; }
 
-.container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.circle, .circle::before { content: " "; margin: 15px; width: 15px; height: 15px; border-radius: 50%; margin: 0 auto; transition: all 0.3s; background-color: #00FF00;}
 
-.circle, .circle::before {
-  content: " ";
-  margin: 15px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0 auto;
-  transition: all 0.3s;
-  background-color: #00FF00;
-}
+.circle::before { animation: mymove 2s infinite;  position: absolute;background-color: #00FF00;}
 
-.circle::before {
-  animation: mymove 2s infinite;
-  position: absolute;
-  background-color: #00FF00;
-}
+@-webkit-keyframes mymove { 50%   { transform: scale(2); opacity: 0 }
+  100%   { transform: scale(2);opacity: 0 } } }
 
-@-webkit-keyframes mymove {
-  50%   {
-    transform: scale(2);
-    opacity: 0
-  }
-  100%   {
-    transform: scale(2);
-    opacity: 0
-  }
-}
-		 
-}
-
-	 
- 
   </style>
 </head>
 
