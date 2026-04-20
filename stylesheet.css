@@ -22,9 +22,7 @@ body {
   margin: 0;
 }
 
-img {
-  border-radius: 20px; /* Adjust this value for more or less curve */
-}
+ 
 
 .caption-style {
 	padding: 5px;
@@ -53,6 +51,7 @@ b, strong {
 img /*responsive images*/{ 
   max-width: 100%;
   height: auto;
+ border-radius: 20px; /* Adjust this value for more or less curve */
 } 
  
 /* lists and nav #primary-menu so only the menu is inline and other lists are not*/
