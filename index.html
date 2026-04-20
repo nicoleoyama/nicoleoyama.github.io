@@ -208,8 +208,11 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
     </div>
 
     <div class="item">
-      <h2>6. Consectetur</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque hic iusto tenetur, distinctio alias iste expedita ullam unde dolores aliquid, ipsa laudantium rerum deleniti, tempora enim dolore? Ab, neque ratione?</p>
+      <p>&copy; <span id="current-year"></span> Nicole Oyama. All rights reserved.</p>
+
+ <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
     </div>
   </div>
 </section>
@@ -221,11 +224,7 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 
 <footer>
   
-<p>&copy; <span id="current-year"></span> Nicole Oyama. All rights reserved.</p>
 
- <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-</script>
  
  </footer>
 
