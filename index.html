@@ -48,10 +48,66 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 .circle, .circle::before { content: " "; margin: 15px; width: 15px; height: 15px; border-radius: 50%; margin: 0 auto; transition: all 0.3s; background-color: #00FF00;}
 
 .circle::before { animation: mymove 2s infinite;  position: absolute;background-color: #00FF00;}
-
+.blink {
+  animation: blink 0.5s infinite;
+}
+@keyframes blink{
+  to { opacity: .0; }
+}
+.flex {
+	display: flex;
+}
+.header-sub-title {
+  color: #fff;
+  font-family: "Courier";
+  font-size: 20px;
+  padding: 0.1em;
+}
  
 	
   </style>
+
+	<script>
+		const words = ["CSS3.", "HTML5.", "javascript."];
+let i = 0;
+let timer;
+
+function typingEffect() {
+	let word = words[i].split("");
+	var loopTyping = function() {
+		if (word.length > 0) {
+			document.getElementById('word').innerHTML += word.shift();
+		} else {
+			deletingEffect();
+			return false;
+		};
+		timer = setTimeout(loopTyping, 500);
+	};
+	loopTyping();
+};
+
+function deletingEffect() {
+	let word = words[i].split("");
+	var loopDeleting = function() {
+		if (word.length > 0) {
+			word.pop();
+			document.getElementById('word').innerHTML = word.join("");
+		} else {
+			if (words.length > (i + 1)) {
+				i++;
+			} else {
+				i = 0;
+			};
+			typingEffect();
+			return false;
+		};
+		timer = setTimeout(loopDeleting, 200);
+	};
+	loopDeleting();
+};
+
+typingEffect();</script>
+	
 </head>
 
 <body>
@@ -109,7 +165,9 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 
     <div class="item">
        
- 
+ <div class="flex">
+	<p class="header-sub-title" id="word"></p><p class="header-sub-title blink">|</p>
+</div>
     
       Web Design.
 	  Crochet.
