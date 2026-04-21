@@ -43,11 +43,40 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 
 .item > * + * { margin-block-start: 1.125rem; }
 
-.container {  height: 100%; display: flex; justify-content: center; align-items: center; }
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.circle, .circle::before { content: " "; margin: 15px; width: 15px; height: 15px; border-radius: 50%; margin: 0 auto; transition: all 0.3s; background-color: #00FF00;}
+.circle, .circle::before {
+  content: " ";
+  margin: 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.3s;
+  background-color: #FF0055;
+}
 
-.circle::before { animation: mymove 2s infinite;  position: absolute;background-color: #00FF00;}
+.circle::before {
+  animation: mymove 2s infinite;
+  position: absolute;
+  background-color: #00FF00
+}
+
+@-webkit-keyframes mymove {
+  50%   {
+    transform: scale(2);
+    opacity: 0
+  }
+  100%   {
+    transform: scale(2);
+    opacity: 0
+  }
+} 
 .blink {
   animation: blink 0.5s infinite;
 }
