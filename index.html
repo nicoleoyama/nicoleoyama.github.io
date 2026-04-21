@@ -78,41 +78,7 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
   }
 } 
  
-#text
-{
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  margin: 0 auto; /*Important! So that the text doesn't move up */
-  letter-spacing: 2px;
-  font-size: 25px;
-  color: black;
-}
-
-#cursor
-{
-  display: inline-block;
-  vertical-align: middle;
-  width: 2.5px;
-  height: 20px;
-  animation-name: cursorMove;
-  animation-duration: .75s;
-  animation-timing-function: step-end;
-  animation-iteration-count: infinite;
-}
-
-@keyframes cursorMove
-{
-  from 
-  {
-    background-color: transparent;
-  }
-  50%
-  {
-    background-color: black;
-  }
-}
-	
+ 
   </style>
 
 	
@@ -174,61 +140,9 @@ h2 { font-weight: 600; font-size: 1.65rem; line-height: 1.1;}
 
     <div class="item">
 
-		<script>
-			var sentences = ["Web Design.", "Crochet.", "Art."];
-var currentSentence = 0;
-var currentSentenceChar = 0;
-var intervalValue;
-var textElement = document.querySelector("#text");
-var myCursor = document.querySelector("#cursor");
+		 
 
-function TypingEffect()
-{
-  var text = sentences[currentSentence].substring(0, currentSentenceChar +1);
-  textElement.innerHTML = text;
-  currentSentenceChar++;
-  
-  if(text === sentences[currentSentence])
-  {
-    clearInterval(intervalValue);
-    setTimeout(function()
-    {
-      intervalValue = setInterval(DeletingEffect, 60);
-    }, 130);
-  }
-}
-
-function DeletingEffect()
-{
-  var text = sentences[currentSentence].substring(0, currentSentenceChar -1);
-  textElement.innerHNTML = text;
-  currentSentenceChar--;
-  
-  if(text === '')
-  {
-    clearInterval(intervalValue);
-    if(currentSentence === (sentences.length-1))
-       currentSentence = 0;
-    else
-      currentSentence++;
-    
-    currentSentenceChar = 0;
-    
-    setTimeout(function()
-    {
-      myCursor.style.display = 'inline-block';
-      intervalValue = setInterval(TypingEffect,50);
-    }, 100);
-    
-  }
-}
-
-intervalValue = setInterval(TypingEffect, 100);
-		</script>
-
-<div id="text"></div>
-<div id="cursor"></div>
-	
+ 
   
      
     </div>
