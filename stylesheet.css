@@ -20,10 +20,8 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
+	line-height: 1.5em;
 }
-
- 
-
 .caption-style {
 	padding: 5px;
 	margin: 10px;
